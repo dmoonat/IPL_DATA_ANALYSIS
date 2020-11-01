@@ -82,7 +82,7 @@ def main():
 		legend = ['{0} - {1:1.2f} %'.format(i,j) for i,j in zip(labels, percent)]
 		plt.pie(slices)#,explode=explode, autopct='%1.1f%%', pctdistance=0.6
 		plt.title("Total runs contribution")
-		plt.legend(legend, loc='left center', bbox_to_anchor=(-0.01, 1.), fontsize=8)
+		plt.legend(legend, bbox_to_anchor=(-0.01, 1.), fontsize=8)
 		st.pyplot()
 
 		season=df_matches[['id','season']].merge(df_batsman, left_on = 'id', right_on = 'match_id', how = 'left').drop('id', axis = 1)
